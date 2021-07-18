@@ -1,0 +1,92 @@
+
+  .card {
+    list-style: none;
+    margin: auto;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    width: 40rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: var(--white);
+    box-shadow: 1px 2px 12px var(--gray-2);
+    transition: box-shadow 350ms;
+    img{
+      cursor: default;
+    }
+  }
+
+  .card:hover {
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 2px 8px 16px var(--gray-2);
+  }
+    
+  .card-info{
+    padding: 1.5rem;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-title{
+    margin: 0px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--gray-5);
+    font-family: Solway, Tahoma;
+  }
+
+  .card-link,
+  .card-link > a {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .75rem;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    border-radius: var(--radius);
+    background-color: var(--primary-light);
+    color: var(--primary);
+    transition: all 0.15s linear;
+    &:hover{
+      color: var(--white);
+      background-color: var(--primary)
+    }
+  }
+
+  .card-date {
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: var(--gray-3);
+  }
+
+  .card-tag{
+    text-transform: uppercase;
+  }
+  
+  .card-description {
+    margin-top: 1rem;
+    color: var(--gray-4);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  @media screen and (min-width: 960px) {
+    .card {
+      display: grid;
+      grid-template-columns: 30rem 1fr;
+      column-gap: 0;
+      width: 100%;
+      img{
+        max-height: 20Rem;
+      }
+
+    }
+  }
